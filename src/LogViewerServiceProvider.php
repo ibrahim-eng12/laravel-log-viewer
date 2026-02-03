@@ -45,10 +45,10 @@ class LogViewerServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/lang' => $this->app->langPath('vendor/log-viewer'),
         ], 'log-viewer-lang');
 
-        // Publish assets
+        // Publish assets (logo)
         $this->publishes([
-            __DIR__ . '/../public' => public_path('vendor/log-viewer'),
-        ], 'log-viewer-assets');
+            __DIR__ . '/../public' => public_path('vendor/log-owl'),
+        ], 'log-owl-assets');
     }
 
     /**

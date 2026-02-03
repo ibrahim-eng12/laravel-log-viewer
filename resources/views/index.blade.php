@@ -184,18 +184,30 @@
                     <div class="flex items-center gap-4">
                         <div class="relative">
                             <div class="w-12 h-12 rounded-lg dark:bg-cyber-card bg-white border-2 dark:border-cyber-cyan border-indigo-500 flex items-center justify-center shadow-cyber">
-                                <svg class="w-7 h-7 dark:text-cyber-cyan text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
+                                <!-- Owl Logo Placeholder - Replace src with your logo -->
+                                @if(file_exists(public_path('vendor/log-owl/logo.png')))
+                                    <img src="{{ asset('vendor/log-owl/logo.png') }}" alt="LogOwl" class="w-8 h-8">
+                                @else
+                                    <!-- Default Owl SVG Icon -->
+                                    <svg class="w-8 h-8 dark:text-cyber-cyan text-indigo-500" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                                        <circle cx="8.5" cy="10.5" r="2.5"/>
+                                        <circle cx="15.5" cy="10.5" r="2.5"/>
+                                        <circle cx="8.5" cy="10.5" r="1" fill="white"/>
+                                        <circle cx="15.5" cy="10.5" r="1" fill="white"/>
+                                        <path d="M12 16c-1.5 0-2.5-.5-2.5-.5s1 1.5 2.5 1.5 2.5-1.5 2.5-1.5-.5.5-2.5.5z"/>
+                                        <path d="M6 6s1-2 3-2c1 0 2 1 3 1s2-1 3-1c2 0 3 2 3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                @endif
                             </div>
                             <div class="absolute -top-1 -right-1 w-3 h-3 rounded-full dark:bg-cyber-green bg-green-500 status-dot"></div>
                         </div>
                         <div>
                             <h1 class="text-2xl sm:text-3xl font-cyber font-bold tracking-wider dark:text-cyber-cyan text-indigo-600 neon-text">
-                                {{ __('log-viewer::log-viewer.title') }}
+                                LogOwl
                             </h1>
                             <p class="text-xs dark:text-gray-500 text-gray-500 font-mono tracking-widest uppercase mt-1">
-                                // SYSTEM MONITOR v2.0
+                                // {{ __('log-viewer::log-viewer.title') }}
                             </p>
                         </div>
                     </div>
@@ -598,7 +610,7 @@
             <!-- Footer -->
             <footer class="mt-8 pb-6 text-center">
                 <p class="text-xs dark:text-gray-600 text-gray-400 font-mono tracking-wider">
-                    // SYSTEM_MONITOR :: SECURED_CONNECTION :: v2.0
+                    // LogOwl :: SMART_LOG_MONITORING :: v1.0
                 </p>
             </footer>
         </div>

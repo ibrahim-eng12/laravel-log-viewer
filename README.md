@@ -1,6 +1,10 @@
-# Laravel Log Viewer
+# 🦉 LogOwl
 
 A Laravel package to view, navigate, and filter application logs with intelligent error descriptions and suggested solutions.
+
+<p align="center">
+  <img src="public/logo.png" alt="LogOwl Logo" width="200">
+</p>
 
 ## Features
 
@@ -20,23 +24,7 @@ A Laravel package to view, navigate, and filter application logs with intelligen
 ### 1. Install via Composer
 
 ```bash
-composer require ibrahim-eng12/laravel-log-viewer
-```
-
-Or add to your `composer.json`:
-
-```json
-{
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./packages/laravel-log-viewer"
-        }
-    ],
-    "require": {
-        "yourvendor/laravel-log-viewer": "*"
-    }
-}
+composer require ibrahim-eng12/log-owl
 ```
 
 ### 2. Publish Configuration (Optional)
@@ -56,6 +44,14 @@ php artisan vendor:publish --tag=log-viewer-views
 ```bash
 php artisan vendor:publish --tag=log-viewer-lang
 ```
+
+### 5. Publish Assets - Logo (Optional)
+
+```bash
+php artisan vendor:publish --tag=log-owl-assets
+```
+
+This will publish the logo to `public/vendor/log-owl/logo.png`.
 
 ## Configuration
 
@@ -97,7 +93,7 @@ return [
 
 ## Usage
 
-After installation, navigate to `/logs` in your browser (while authenticated) to access the log viewer.
+After installation, navigate to `/logs` in your browser (while authenticated) to access LogOwl.
 
 ### Routes
 
@@ -117,7 +113,7 @@ After installation, navigate to `/logs` in your browser (while authenticated) to
 
 ## Supported Error Types
 
-The package recognizes and provides solutions for common Laravel errors:
+LogOwl recognizes and provides solutions for common Laravel errors:
 
 - **Database Errors**: Connection issues, missing tables/columns, duplicates
 - **Authentication Errors**: Unauthenticated access, CSRF mismatches
@@ -133,7 +129,7 @@ The package recognizes and provides solutions for common Laravel errors:
 
 ## Multi-Language Support
 
-The package supports multiple languages with a built-in language switcher. Currently supported languages:
+LogOwl supports multiple languages with a built-in language switcher. Currently supported languages:
 
 - **English** (en) - Default
 - **Arabic** (ar) - With full RTL support
