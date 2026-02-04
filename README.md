@@ -243,4 +243,4 @@ Views will be published to `resources/views/vendor/log-viewer/`.
 
 ## License
 
-MIT License
+[MIT License](LICENSE)
